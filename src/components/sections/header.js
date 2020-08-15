@@ -27,24 +27,26 @@ const Header = () => {
       <Container>
         <Flex>
           <HeaderTextGroup>
-            <Subtitle>Personal Finance</Subtitle>
+            <Subtitle>quirkshop</Subtitle>
             <h1>
-              All your money,
+              Create meaningful
               <br />
-              one account
+              connections,
+              <br />
+              discover yourself.
             </h1>
             <h2>
-              We're building next generation personal finance tools. Sign up to
-              get early access.
+              We want to deliver the promise of true meaningful connections
+              and social networking online
             </h2>
             <HeaderForm onSubmit={handleSubmit}>
-              <HeaderInput placeholder="Your email" />
-              <HeaderButton>Early access</HeaderButton>
+              <HeaderInput placeholder="Enter your email" />
+              <HeaderButton>Join Waitlist</HeaderButton>
             </HeaderForm>
-            <FormSubtitle>
+            {/* <FormSubtitle>
               Already have a beta account?{" "}
               <FormSubtitleLink to="/">Sign in</FormSubtitleLink>
-            </FormSubtitle>
+            </FormSubtitle> */}
           </HeaderTextGroup>
           <ImageWrapper>
             <StyledImage fluid={data.file.childImageSharp.fluid} />
@@ -59,23 +61,20 @@ const Header = () => {
 export default Header
 
 const HeaderWrapper = styled.header`
-  background-color: #f8f8f8;
-  padding: 160px 0 80px 0;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
   @media (max-width: ${props => props.theme.screen.md}) {
   }
 `
 const Subtitle = styled.h5`
-  font-size: 16px;
-  color: ${props => props.theme.color.accent};
+  font-size: 18px;
+  color: #101010;
   letter-spacing: 0px;
   margin-bottom: 16px;
 `
 
 const HeaderTextGroup = styled.div`
   margin: 0;
-
+  padding-top: 160px;
   > div {
     width: 120%;
     margin-bottom: -4.5%;
@@ -88,6 +87,7 @@ const HeaderTextGroup = styled.div`
   h1 {
     margin: 0 0 24px;
     color: ${props => props.theme.color.primary};
+    font-size: 64px;
   }
 
   h2 {
@@ -136,20 +136,21 @@ const FormSubtitleLink = styled(Link)`
 const HeaderInput = styled.input`
   font-weight: 500;
   font-size: 16px;
-  color: ${props => props.theme.color.primary};
+  color: #101010;
+  background-color: #F2F1F9;
   line-height: 42px;
-  width: 100%;
   text-align: left;
-  height: 60px;
+  width: 308px;
+  height: 44px;
   border-width: 1px;
   border-style: solid;
-  border-color: ${props => props.theme.color.secondary};
+  border-color: #F2F1F9;
   border-image: initial;
-  border-radius: 4px;
+  border-radius: 10px;
   padding: 8px 16px;
   outline: 0px;
   &:focus {
-    box-shadow: inset ${props => props.theme.color.secondary} 0px 0px 0px 2px;
+    box-shadow: inset #281E78 0px 0px 0px 2px;
   }
   @media (max-width: ${props => props.theme.screen.md}) {
     margin-bottom: 8px;
@@ -165,14 +166,16 @@ const HeaderButton = styled.button`
   font-size: 14px;
   color: white;
   letter-spacing: 1px;
-  height: 60px;
+  width: 187px;
+  height: 44px;
   display: block;
   margin-left: 8px;
   text-transform: uppercase;
   cursor: pointer;
   white-space: nowrap;
-  background: ${props => props.theme.color.secondary};
-  border-radius: 4px;
+  background: #3CDBC0;
+  box-shadow: 0px 16px 40px rgba(60, 219, 192, 0.32);
+  border-radius: 10px;
   padding: 0px 40px;
   border-width: 0px;
   border-style: initial;
