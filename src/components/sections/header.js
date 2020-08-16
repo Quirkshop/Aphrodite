@@ -3,12 +3,13 @@ import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
+import Logo from '../global/Logo/Logo';
 import { Container } from "../global"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
+      file(sourceInstanceName: { eq: "product" }, name: { eq: "quirkshop_pattern_x3" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -27,7 +28,7 @@ const Header = () => {
       <Container>
         <Flex>
           <HeaderTextGroup>
-            <Subtitle>quirkshop</Subtitle>
+            <Subtitle><Logo /></Subtitle>
             <h1>
               Create meaningful
               <br />
@@ -69,11 +70,10 @@ const Subtitle = styled.h5`
   font-size: 18px;
   color: #101010;
   letter-spacing: 0px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 `
 
 const HeaderTextGroup = styled.div`
-  margin: 0;
   padding-top: 160px;
   > div {
     width: 120%;
@@ -86,12 +86,13 @@ const HeaderTextGroup = styled.div`
 
   h1 {
     margin: 0 0 24px;
-    color: ${props => props.theme.color.primary};
+    color: #101010;
     font-size: 64px;
   }
 
   h2 {
     margin-bottom: 24px;
+    color: #828282;
     ${props => props.theme.font_size.regular}
   }
 
@@ -200,7 +201,9 @@ const ImageWrapper = styled.div`
 `
 
 const StyledImage = styled(Img)`
-  width: 500px;
+  margin-left: 250px;
+  width: 700px;
+  height: 862px;
   @media (max-width: ${props => props.theme.screen.md}) {
     width: 400px;
   }
