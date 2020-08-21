@@ -1,10 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import { graphql, useStaticQuery, Link } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import styled from "styled-components";
+import { graphql, useStaticQuery, Link } from "gatsby";
+import Img from "gatsby-image";
+import tw from "twin.macro";
 
 import Logo from '../global/Logo/Logo';
-import { Container } from "../global"
+import { Container } from "../global";
 
 const Header = () => {
   const data = useStaticQuery(graphql`

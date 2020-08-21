@@ -9,6 +9,7 @@ module.exports = {
     author: `Keegan Burkett`,
   },
   plugins: [
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
